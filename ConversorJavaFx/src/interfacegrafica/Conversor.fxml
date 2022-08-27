@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacegrafica.ConversorController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9eaeb" height="448.0" layoutX="229.0" stroke="TRANSPARENT" strokeType="INSIDE" width="17.0" />
+      <ImageView fitHeight="440.0" fitWidth="262.0" layoutX="187.0" layoutY="-2.0" opacity="0.07" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@java.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="59.0" text="Conversor de Moedas">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="127.0" text="Valor $" />
+      <TextField fx:id="txtValorMoeda" layoutX="60.0" layoutY="123.0" onKeyReleased="#onKeyReleased" promptText="Valor" />
+      <Button fx:id="btnCalcular" disable="true" layoutX="58.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnCalcularClick" prefWidth="60.0" text="Calcular" />
+      <Button fx:id="btnLimpar" disable="true" layoutX="147.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnLimparClick" prefWidth="60.0" text="Limpar" />
+      <Label fx:id="lblResultado" alignment="CENTER" layoutY="361.0" prefHeight="7.0" prefWidth="229.0" textAlignment="CENTER" AnchorPane.bottomAnchor="70.0" />
+      <Label layoutX="14.0" layoutY="191.0" text="Moeda" />
+      <ComboBox fx:id="cboMoeda" layoutX="58.0" layoutY="185.0" prefWidth="150.0" />
+      <Label layoutX="249.0" layoutY="59.0" text="Conversor de Temperaturas">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3185d3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="475.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis></Rectangle>
+      <Label layoutX="145.0" layoutY="3.0" text="CONVERSORES" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="264.0" layoutY="127.0" text="Grau °" />
+      <TextField fx:id="txtValorTemp" layoutX="310.0" layoutY="123.0" onKeyReleased="#onKeyReleasedTemp" promptText="Valor" />
+      <Label layoutX="265.0" layoutY="191.0" text="Tipos" />
+      <ComboBox fx:id="cboTemp" layoutX="309.0" layoutY="185.0" prefWidth="150.0" />
+      <Button fx:id="btnCalcularTemp" disable="true" layoutX="310.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnCalcularClickTemp" prefWidth="60.0" text="Calcular" />
+      <Button fx:id="btnLimparTemp" disable="true" layoutX="399.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnLimparClickTemp" prefWidth="60.0" text="Limpar" />
+      <Label fx:id="lblResultadoTemp" alignment="CENTER" layoutX="247.0" layoutY="361.0" prefHeight="7.0" prefWidth="229.0" textAlignment="CENTER" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3185d3" height="10.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="475.0">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Rectangle>
+      <Hyperlink layoutX="-2.0" layoutY="419.0" onAction="#openLink" text="euclides981" textFill="#070707">
+         <effect>
+            <Blend />
+         </effect>
+      </Hyperlink>
+   </children>
+</AnchorPane>
