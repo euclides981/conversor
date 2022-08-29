@@ -34,7 +34,6 @@ public class ConversorController implements Initializable{
 		Desktop.getDesktop().browse(new URI("https://github.com/euclides981"));
 	}
 	
-	
 	public void onBtnCalcularClick() {
 		
 		double ValorMoeda;
@@ -124,6 +123,7 @@ public class ConversorController implements Initializable{
 	public void onBtnLimparClick() {
 		txtValorMoeda.setText("");
 		lblResultado.setText("");
+		cboMoeda.valueProperty().set(null);
 		btnLimpar.setDisable(true);
 		btnCalcular.setDisable(true);
 	}
@@ -206,6 +206,7 @@ public class ConversorController implements Initializable{
 		public void onBtnLimparClickTemp() {
 			txtValorTemp.setText("");
 			lblResultadoTemp.setText("");
+			cboTemp.valueProperty().set(null);
 			btnLimparTemp.setDisable(true);
 			btnCalcularTemp.setDisable(true);
 		}
