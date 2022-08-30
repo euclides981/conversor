@@ -23,6 +23,8 @@ public class ConversorController implements Initializable{
 	@FXML
 	private Button btnLimpar;
 	@FXML
+	private Label lblRes;
+	@FXML
 	private Label lblResultado;
 	@FXML
 	private ComboBox <String> cboMoeda;
@@ -42,8 +44,8 @@ public class ConversorController implements Initializable{
 		double dolar = 5.12;
 		double euro = 5.08;
 		double libra = 6.01;
-		double pesoArg = 0.03;
-		double pesoChi = 0.0056;
+		double pesoArg = 0.037;
+		double pesoChi = 0.0058;
 		
 		
 		ValorMoeda = Double.parseDouble(txtValorMoeda.getText());
@@ -52,77 +54,98 @@ public class ConversorController implements Initializable{
 		if(cboMoeda.getValue().equals("Reais para Dolar")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda / dolar);
+			
+			lblRes.setText("R$" + ValorMoeda + " Reais equivale a:");
 		
-			lblResultado.setText("Você possui $ " + formataMoeda + " Dolares");
+			lblResultado.setText("$" + formataMoeda + " Dolares");
 		}
 		
 		if(cboMoeda.getValue().equals("Dolar para Reais")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda * dolar);
+			
+			lblRes.setText("$" + ValorMoeda + " Dolares equivale a:");
 		
-			lblResultado.setText("Você possui R$ " + formataMoeda + " Reais");
+			lblResultado.setText("R$" + formataMoeda + " Reais");
 		}
 		
 		if(cboMoeda.getValue().equals("Reais para Euro")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda / euro);
+			
+			lblRes.setText("R$" + ValorMoeda + " Reais equivale a:");
 		
-			lblResultado.setText("Você possui € " + formataMoeda + " Euros");
+			lblResultado.setText("€" + formataMoeda + " Euros");
 		}
 		
 		if(cboMoeda.getValue().equals("Euro para Reais")) {
 					
 			formataMoeda = String.format("%.2f", ValorMoeda * euro);
+			
+			lblRes.setText("€" + ValorMoeda + " Euros equivale a:");
 		
-			lblResultado.setText("Você possui R$ " + formataMoeda + " Reais");
+			lblResultado.setText("R$" + formataMoeda + " Reais");
 		}
 		
 		if(cboMoeda.getValue().equals("Reais para Libras")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda / libra);
+			
+			lblRes.setText("R$" + ValorMoeda + " Reais equivale a:");
 		
-			lblResultado.setText("Você possui £ " + formataMoeda + " Libras Esterlinas");
+			lblResultado.setText("£" + formataMoeda + " Libras Esterlinas");
 		}
 		
 		if(cboMoeda.getValue().equals("Libras para Reais")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda * libra);
+			
+			lblRes.setText("£" + ValorMoeda + " Libras Esterlinas equivale a:");
 		
-			lblResultado.setText("Você possui R$ " + formataMoeda + " Reais");
+			lblResultado.setText("R$" + formataMoeda + " Reais");
 		}
 		
 		if(cboMoeda.getValue().equals("Reais para Pesos Argentinos")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda / pesoArg);
+			
+			lblRes.setText("R$" + ValorMoeda + " Reais equivale a:");
 		
-			lblResultado.setText("Você possui $ " + formataMoeda + " Pesos Argentinos");
+			lblResultado.setText("$" + formataMoeda + " Pesos Argentinos");
 		}
 	
 		if(cboMoeda.getValue().equals("Pesos Argentinos para Reais")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda * pesoArg);
+			
+			lblRes.setText("$" + ValorMoeda + " Pesos Argentinos equivale a:");
 		
-			lblResultado.setText("Você possui R$ " + formataMoeda + " Reais");
+			lblResultado.setText("R$" + formataMoeda + " Reais");
 		}
 		
 		if(cboMoeda.getValue().equals("Reais para Pesos Chilenos")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda / pesoChi);
+			
+			lblRes.setText("R$" + ValorMoeda + " Reais equivale a:");
 		
-			lblResultado.setText("Você possui $ " + formataMoeda + " Pesos Chilenos");
+			lblResultado.setText("$" + formataMoeda + " Pesos Chilenos");
 		}
 	
 		if(cboMoeda.getValue().equals("Pesos Chilenos para Reais")) {
 			
 			formataMoeda = String.format("%.2f", ValorMoeda * pesoChi);
+			
+			lblRes.setText("$" + ValorMoeda + " Pesos Chilenos equivale a:");
 		
-			lblResultado.setText("Você possui R$ " + formataMoeda + " Reais");
+			lblResultado.setText("R$" + formataMoeda + " Reais");
 		}
 	}
 	
 	public void onBtnLimparClick() {
 		txtValorMoeda.setText("");
 		lblResultado.setText("");
+		lblRes.setText("");
 		cboMoeda.valueProperty().set(null);
 		btnLimpar.setDisable(true);
 		btnCalcular.setDisable(true);
@@ -191,14 +214,14 @@ public class ConversorController implements Initializable{
 				
 				formataTemp = String.format("%.2f", (ValorTemp - 273.15) * 9/5 + 32);
 			
-				lblResultadoTemp.setText("O resultado é: " + formataTemp + " Kelvin");
+				lblResultadoTemp.setText("O resultado é: " + formataTemp + " Fahrenheit");
 			}
 			
 			if(cboTemp.getValue().equals("Kelvin para Celsius")) {
 				
 				formataTemp = String.format("%.2f", ValorTemp - 273.15);
 			
-				lblResultadoTemp.setText("O resultado é: " + formataTemp + " Kelvin");
+				lblResultadoTemp.setText("O resultado é: " + formataTemp + " Celsius");
 			}
 			
 		}
