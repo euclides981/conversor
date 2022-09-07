@@ -13,10 +13,10 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacegrafica.ConversorController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="452.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfacegrafica.ConversorController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9eaeb" height="448.0" layoutX="229.0" stroke="TRANSPARENT" strokeType="INSIDE" width="17.0" />
-      <ImageView fitHeight="440.0" fitWidth="262.0" layoutX="187.0" layoutY="-2.0" opacity="0.07" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e9eaeb" height="448.0" layoutX="253.0" stroke="TRANSPARENT" strokeType="INSIDE" width="17.0" />
+      <ImageView fitHeight="440.0" fitWidth="262.0" layoutX="157.0" layoutY="-2.0" opacity="0.07" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@java.png" />
          </image>
@@ -27,34 +27,34 @@
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="127.0" text="Valor $" />
-      <TextField fx:id="txtValorMoeda" layoutX="60.0" layoutY="123.0" onKeyReleased="#onKeyReleased" promptText="Valor" />
-      <ComboBox fx:id="cboMoeda" layoutX="58.0" layoutY="185.0" prefWidth="150.0" />
-      <Button fx:id="btnCalcular" disable="true" layoutX="58.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnCalcularClick" prefWidth="60.0" text="Calcular" />
-      <Button fx:id="btnLimpar" disable="true" layoutX="147.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnLimparClick" prefWidth="60.0" text="Limpar" />
-      <Label fx:id="lblResultado" alignment="CENTER" layoutX="5.0" layoutY="361.0" prefHeight="17.0" prefWidth="220.0" AnchorPane.bottomAnchor="70.0" />
+      <TextField fx:id="txtValorMoeda" layoutX="72.0" layoutY="123.0" onKeyReleased="#onKeyReleased" prefWidth="170.0" promptText="Valor" />
+      <ComboBox fx:id="cboMoeda" layoutX="72.0" layoutY="185.0" prefHeight="24.0" prefWidth="170.0" />
+      <Button fx:id="btnCalcular" disable="true" layoutX="72.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnCalcularClick" prefHeight="24.0" prefWidth="75.0" text="Calcular" />
+      <Button fx:id="btnLimpar" disable="true" layoutX="167.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnLimparClick" prefHeight="24.0" prefWidth="75.0" text="Limpar" />
+      <Label fx:id="lblResultado" alignment="CENTER" layoutX="10.0" layoutY="360.0" prefHeight="17.0" prefWidth="220.0" AnchorPane.bottomAnchor="75.0" />
       <Label layoutX="14.0" layoutY="191.0" text="Moeda" />
       <Label layoutX="249.0" layoutY="59.0" text="Conversor de Temperaturas">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3185d3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="475.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3185d3" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="518.0">
          <rotationAxis>
             <Point3D />
          </rotationAxis></Rectangle>
-      <Label layoutX="145.0" layoutY="3.0" text="CONVERSORES" textFill="WHITE">
+      <Label layoutX="160.0" layoutY="3.0" text="CONVERSORES" textFill="WHITE">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <Label layoutX="264.0" layoutY="127.0" text="Grau °" />
-      <TextField fx:id="txtValorTemp" layoutX="310.0" layoutY="123.0" onKeyReleased="#onKeyReleasedTemp" promptText="Valor" />
-      <ComboBox fx:id="cboTemp" layoutX="309.0" layoutY="185.0" prefWidth="150.0" />
-      <Button fx:id="btnCalcularTemp" disable="true" layoutX="310.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnCalcularClickTemp" prefWidth="60.0" text="Calcular" />
-      <Button fx:id="btnLimparTemp" disable="true" layoutX="399.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnLimparClickTemp" prefWidth="60.0" text="Limpar" />
-      <Label layoutX="265.0" layoutY="191.0" text="Tipos" />
-      <Label fx:id="lblResultadoTemp" alignment="CENTER" layoutX="247.0" layoutY="361.0" prefHeight="7.0" prefWidth="229.0" textAlignment="CENTER" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3185d3" height="10.0" layoutY="438.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="475.0">
+      <Label layoutX="276.0" layoutY="127.0" text="Grau °" />
+      <TextField fx:id="txtValorTemp" layoutX="321.0" layoutY="123.0" onKeyReleased="#onKeyReleasedTemp" prefWidth="170.0" promptText="Valor" />
+      <ComboBox fx:id="cboTemp" layoutX="321.0" layoutY="185.0" prefHeight="24.0" prefWidth="170.0" />
+      <Button fx:id="btnCalcularTemp" disable="true" layoutX="321.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnCalcularClickTemp" prefWidth="75.0" text="Calcular" />
+      <Button fx:id="btnLimparTemp" disable="true" layoutX="416.0" layoutY="270.0" mnemonicParsing="false" onAction="#onBtnLimparClickTemp" prefWidth="75.0" text="Limpar" />
+      <Label layoutX="277.0" layoutY="191.0" text="Tipos" />
+      <Label fx:id="lblResultadoTemp" alignment="CENTER" layoutX="278.0" layoutY="352.0" prefHeight="7.0" prefWidth="229.0" textAlignment="CENTER" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3185d3" height="10.0" layoutX="-1.0" layoutY="442.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="520.0">
          <rotationAxis>
             <Point3D />
          </rotationAxis>
@@ -68,6 +68,6 @@
             <Blend />
          </effect>
       </Hyperlink>
-      <Label fx:id="lblRes" alignment="CENTER" layoutX="5.0" layoutY="337.0" prefHeight="17.0" prefWidth="220.0" />
+      <Label fx:id="lblRes" alignment="CENTER" layoutX="10.0" layoutY="337.0" prefHeight="17.0" prefWidth="220.0" />
    </children>
 </AnchorPane>
