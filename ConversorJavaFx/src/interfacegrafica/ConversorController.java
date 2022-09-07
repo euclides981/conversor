@@ -206,7 +206,7 @@ public class ConversorController implements Initializable{
 				
 				formataTemp = String.format("%.2f", (ValorTemp - 32) * 5/9);
 			
-				lblResultadoTemp.setText("O resultado é: " + formataTemp + " grau Celsius");
+				lblResultadoTemp.setText("O Resultado é: " + formataTemp + " grau Celsius");
 			}
 			
 			
@@ -214,14 +214,14 @@ public class ConversorController implements Initializable{
 				
 				formataTemp = String.format("%.2f", (ValorTemp - 273.15) * 9/5 + 32);
 			
-				lblResultadoTemp.setText("O resultado é: " + formataTemp + " Fahrenheit");
+				lblResultadoTemp.setText("O Resultado é: " + formataTemp + " Fahrenheit");
 			}
 			
 			if(cboTemp.getValue().equals("Kelvin para Celsius")) {
 				
 				formataTemp = String.format("%.2f", ValorTemp - 273.15);
 			
-				lblResultadoTemp.setText("O resultado é: " + formataTemp + " Celsius");
+				lblResultadoTemp.setText("O Resultado é: " + formataTemp + " Celsius");
 			}
 			
 		}
